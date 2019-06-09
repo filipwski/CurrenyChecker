@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="k8a-La-DCI">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,37 +10,39 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="N2e-k6-COn">
+            <objects>
+                <navigationController id="k8a-La-DCI" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="mui-lg-LkH">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.072063813300000001" green="0.1161810497" blue="0.2711706606" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ayb-Gk-mGF" kind="relationship" relationship="rootViewController" id="MOg-Dw-N02"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1JA-11-VsC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-123" y="-346"/>
+        </scene>
         <!--Currencies-->
         <scene sceneID="bxB-tO-BX6">
             <objects>
                 <tableViewController id="ayb-Gk-mGF" customClass="CurrencyTableViewController" customModule="CurrenyChecker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="5NS-pb-DXB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.072063813300000001" green="0.1161810497" blue="0.2711706606" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="separatorColor" red="0.84767942289999998" green="1" blue="0.49302562589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" translucent="NO" id="MR4-wM-n6r">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <color key="barTintColor" red="0.072063813300000001" green="0.1161810497" blue="0.2711706606" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <textAttributes key="titleTextAttributes">
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </textAttributes>
-                            <items>
-                                <navigationItem title="Currencies" id="hx0-Gb-HxK">
-                                    <barButtonItem key="leftBarButtonItem" title="Edit" id="qyL-6G-jSs">
-                                        <connections>
-                                            <action selector="startEditing:" destination="ayb-Gk-mGF" id="gbi-AX-s0K"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem key="rightBarButtonItem" systemItem="add" id="8Ry-v9-gI4"/>
-                                </navigationItem>
-                            </items>
-                        </navigationBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" showsReorderControl="YES" indentationWidth="10" reuseIdentifier="CurrencyTableViewCell" textLabel="7su-8i-RCa" detailTextLabel="GO4-eI-NQf" imageView="NTT-lO-1Gq" rowHeight="43" style="IBUITableViewCellStyleValue1" id="6o7-Sf-Vaf" customClass="CurrencyTableViewCell" customModule="CurrenyChecker" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="414" height="43"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="43"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6o7-Sf-Vaf" id="ee1-Cx-ZyX" customClass="CurrencyTableViewCell" customModule="CurrenyChecker" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="42.5"/>
@@ -79,9 +81,20 @@
                             <outlet property="delegate" destination="ayb-Gk-mGF" id="O5g-zB-ZgM"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Currencies" image="currency" id="qd5-LS-bEb"/>
+                    <navigationItem key="navigationItem" title="Currencies" id="s3e-Lw-JCP">
+                        <barButtonItem key="leftBarButtonItem" title="Edit" id="viQ-Ti-C6N">
+                            <connections>
+                                <action selector="startEditing:" destination="ayb-Gk-mGF" id="DUJ-fE-VTW"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Ov4-EV-gVC">
+                            <connections>
+                                <segue destination="8rJ-Kc-sve" kind="show" id="4J5-VJ-EQd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="editButton" destination="qyL-6G-jSs" id="V8r-Ip-43z"/>
+                        <outlet property="editButton" destination="viQ-Ti-C6N" id="shJ-za-ACx"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ziw-Oe-0wq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -91,84 +104,54 @@
         <!--Settings-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SettingsViewController" customModule="CurrenyChecker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Settings" id="8rJ-Kc-sve" customClass="SettingsViewController" customModule="CurrenyChecker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Xb-RO-dLD">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <color key="barTintColor" red="0.072063813300000001" green="0.1161810497" blue="0.2711706606" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Settings" id="xyP-bx-6RQ"/>
-                                </items>
-                            </navigationBar>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ppO-sg-les">
-                                <rect key="frame" x="0.0" y="132" width="414" height="216"/>
-                                <color key="backgroundColor" red="0.072063813300000001" green="0.1161810497" blue="0.2711706606" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Add Currency1 in Currency2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSE-c3-xe2">
-                                <rect key="frame" x="20" y="88" width="374" height="44"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select currencies" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSE-c3-xe2">
+                                <rect key="frame" x="20" y="0.0" width="374" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="Kzd-Vp-fp7"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ppO-sg-les">
+                                <rect key="frame" x="0.0" y="33" width="414" height="216"/>
+                                <color key="backgroundColor" red="0.072063813300000001" green="0.1161810497" blue="0.2711706606" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="0.072063813300000001" green="0.1161810497" blue="0.2711706606" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="RSE-c3-xe2" firstAttribute="top" secondItem="7Xb-RO-dLD" secondAttribute="bottom" id="4qb-Sv-zdk"/>
-                            <constraint firstAttribute="trailing" secondItem="7Xb-RO-dLD" secondAttribute="trailing" id="6U1-Ca-l7b"/>
-                            <constraint firstItem="ppO-sg-les" firstAttribute="top" secondItem="RSE-c3-xe2" secondAttribute="bottom" id="84Q-dE-ms5"/>
                             <constraint firstItem="ppO-sg-les" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="ETy-CV-jFf"/>
-                            <constraint firstItem="ppO-sg-les" firstAttribute="top" secondItem="RSE-c3-xe2" secondAttribute="bottom" id="FAs-5m-uvl"/>
                             <constraint firstItem="ppO-sg-les" firstAttribute="trailing" secondItem="O1u-W8-tvY" secondAttribute="trailing" id="FLJ-H4-0j5"/>
-                            <constraint firstItem="ppO-sg-les" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="88" id="XTe-wY-UER"/>
-                            <constraint firstItem="7Xb-RO-dLD" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="gYa-ec-y3g"/>
+                            <constraint firstItem="RSE-c3-xe2" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="20" id="XOC-fv-guN"/>
+                            <constraint firstItem="RSE-c3-xe2" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="Zd3-fd-S4J"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="RSE-c3-xe2" secondAttribute="trailing" constant="20" id="gHw-Dn-VHu"/>
+                            <constraint firstItem="ppO-sg-les" firstAttribute="top" secondItem="RSE-c3-xe2" secondAttribute="bottom" id="hdF-gk-Otz"/>
+                            <constraint firstItem="ppO-sg-les" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="33" id="i3D-WI-uY1"/>
                             <constraint firstItem="ppO-sg-les" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="m1L-hc-qu5"/>
-                            <constraint firstItem="ppO-sg-les" firstAttribute="top" secondItem="7Xb-RO-dLD" secondAttribute="bottom" constant="44" id="sCJ-cN-fTf"/>
-                            <constraint firstItem="7Xb-RO-dLD" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="uEP-zA-8x6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="services" id="cPa-gy-q4n"/>
-                    <toolbarItems>
-                        <barButtonItem title="Item" id="i2e-OW-fRm"/>
-                    </toolbarItems>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Settings" id="hRV-P1-5uL">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Jfy-oO-MWs"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="currencyPicker" destination="ppO-sg-les" id="Dxy-1H-QoA"/>
+                        <outlet property="topLabel" destination="RSE-c3-xe2" id="WdU-wP-AY8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.27536231884062" y="359.59821428571428"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="yl2-sM-qoP">
-            <objects>
-                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
-                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="barTintColor" red="0.072063813300000001" green="0.1161810497" blue="0.2711706606" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="ayb-Gk-mGF" kind="relationship" relationship="viewControllers" id="Gbh-CC-aT1"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="1547.8260869565217" y="-346.20535714285711"/>
         </scene>
     </scenes>
     <resources>
         <image name="currency" width="30" height="30"/>
-        <image name="services" width="30" height="30"/>
     </resources>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

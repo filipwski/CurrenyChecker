@@ -12,12 +12,13 @@ class CurrencyTableViewController: UITableViewController {
     
     //MARK: - Properties
     var currencies = [Currency]()
+    
     @IBOutlet weak var editButton: UIBarButtonItem!
     
     //MARK: - Actions
     @IBAction func startEditing(_ sender: Any) {
         isEditing = !isEditing
-        if (isEditing) { editButton.title = "Back"
+        if (isEditing) { editButton.title = "Save"
         } else { editButton.title = "Edit" }
     }
     
@@ -105,9 +106,7 @@ class CurrencyTableViewController: UITableViewController {
 //MARK: - UISettings
 
 extension CurrencyTableViewController {
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
+
 }
 
 //MARK: - Sample data
