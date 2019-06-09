@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CurrencyTableViewController: UITableViewController {
+class CurrencyTableViewController: UITableViewController, NewCurrencyDelegation {
     
     //MARK: - Properties
     var currencies = [Currency]()
@@ -20,6 +20,9 @@ class CurrencyTableViewController: UITableViewController {
         isEditing = !isEditing
         if (isEditing) { editButton.title = "Save"
         } else { editButton.title = "Edit" }
+        for element in currencies {
+            print(element.name)
+        }
     }
     
     override func viewDidLoad() {
@@ -32,6 +35,11 @@ class CurrencyTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    func newCurrencyAdded(currencies: [Currency]) {
+        self.currencies = currencies
+        tableView.reloadData()
     }
 
     // MARK: - Table view data source
@@ -100,6 +108,15 @@ class CurrencyTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "addCurrency"{
+            let settingsViewController = segue.destination as? SettingsViewController
+            
+            settingsViewController?.currencies = currencies
+            settingsViewController?.delegate = self
+        }
+    }
 
 }
 
