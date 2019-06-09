@@ -62,11 +62,3 @@ extension SettingsViewController {
     }
 }
 
-
-//MARK: - UI Settings
-extension SettingsViewController {
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-}
-

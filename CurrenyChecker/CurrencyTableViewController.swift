@@ -103,12 +103,6 @@ class CurrencyTableViewController: UITableViewController {
 
 }
 
-//MARK: - UISettings
-
-extension CurrencyTableViewController {
-
-}
-
 //MARK: - Sample data
 
 extension CurrencyTableViewController {
