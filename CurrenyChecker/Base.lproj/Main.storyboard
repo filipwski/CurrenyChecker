@@ -110,34 +110,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select currencies" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSE-c3-xe2">
-                                <rect key="frame" x="20" y="0.0" width="374" height="33"/>
+                                <rect key="frame" x="20" y="0.0" width="374" height="55"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="33" id="Kzd-Vp-fp7"/>
+                                    <constraint firstAttribute="height" constant="55" id="oGs-vU-JhJ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ppO-sg-les">
-                                <rect key="frame" x="0.0" y="33" width="414" height="216"/>
+                                <rect key="frame" x="20" y="55" width="374" height="216"/>
                                 <color key="backgroundColor" red="0.072063813300000001" green="0.1161810497" blue="0.2711706606" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="0.072063813300000001" green="0.1161810497" blue="0.2711706606" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="ppO-sg-les" secondAttribute="trailing" constant="20" id="7XE-vS-hGf"/>
                             <constraint firstItem="ppO-sg-les" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="ETy-CV-jFf"/>
-                            <constraint firstItem="ppO-sg-les" firstAttribute="trailing" secondItem="O1u-W8-tvY" secondAttribute="trailing" id="FLJ-H4-0j5"/>
                             <constraint firstItem="RSE-c3-xe2" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="20" id="XOC-fv-guN"/>
+                            <constraint firstItem="RSE-c3-xe2" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="YOE-xf-26e"/>
                             <constraint firstItem="RSE-c3-xe2" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="Zd3-fd-S4J"/>
+                            <constraint firstItem="ppO-sg-les" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="55" id="fOJ-Jj-GBk"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="RSE-c3-xe2" secondAttribute="trailing" constant="20" id="gHw-Dn-VHu"/>
-                            <constraint firstItem="ppO-sg-les" firstAttribute="top" secondItem="RSE-c3-xe2" secondAttribute="bottom" id="hdF-gk-Otz"/>
-                            <constraint firstItem="ppO-sg-les" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="33" id="i3D-WI-uY1"/>
-                            <constraint firstItem="ppO-sg-les" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="m1L-hc-qu5"/>
+                            <constraint firstItem="ppO-sg-les" firstAttribute="top" secondItem="RSE-c3-xe2" secondAttribute="bottom" id="mCI-ti-dDj"/>
+                            <constraint firstItem="ppO-sg-les" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="20" id="tRx-LI-c6k"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Settings" id="hRV-P1-5uL">
+                    <navigationItem key="navigationItem" title="Add currency" id="hRV-P1-5uL">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="Jfy-oO-MWs"/>
                     </navigationItem>
                     <connections>

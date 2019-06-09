@@ -19,7 +19,8 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
         self.dismiss(animated: true, completion: nil)
     }
     
-    let availableCurrencies = ["test1", "test2", "test3"]
+    let currencyArray = ["AUD", "BRL","CAD","CNY","EUR","GBP","HKD","IDR","ILS","INR","JPY","MXN","NOK","NZD","PLN","RON","RUB","SEK","SGD","USD","ZAR"]
+    
     var currency1 = "..."
     var currency2 = "..."
     
@@ -35,30 +36,46 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
 //MARK: - Picker settings
 extension SettingsViewController {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 2
+        return 4
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return availableCurrencies.count
+        if component == 1 || component == 3 {
+            return currencyArray.count
+        } else {
+            return 1
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
-        return NSAttributedString(string: availableCurrencies[row], attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        
+        switch component {
+        case let number where number == 1 || number == 3:
+            return NSAttributedString(string: currencyArray[row], attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        case 0:
+            return NSAttributedString(string: "Add", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        default:
+            return NSAttributedString(string: "in", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         switch component {
-        case 0:
-            currency1 = availableCurrencies[row]
-            break
         case 1:
-            currency2 = availableCurrencies[row]
+            currency1 = currencyArray[row]
+            break
+        case 3:
+            currency2 = currencyArray[row]
             break
         default:
-            currency1 = "currency1"
-            currency2 = "currency2"
+            break
         }
-        topLabel.text = "Add \(currency1) in \(currency2)"
+        
+        if currency1 == currency2 {
+            topLabel.text = "Same currency chosen"
+        } else {
+            topLabel.text = "\(currency1) in \(currency2)"
+        }
     }
 }
 
