@@ -14,23 +14,15 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
     @IBOutlet weak var currencyPicker: UIPickerView!
     @IBOutlet weak var topLabel: UILabel!
     
-    var currencies: [Currency]?
+    //MRK: - Actions
+    @IBAction func backButtonPressed(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     let currencyArray = ["AUD", "BRL","CAD","CNY","EUR","GBP","HKD","IDR","ILS","INR","JPY","MXN","NOK","NZD","PLN","RON","RUB","SEK","SGD","USD","ZAR"]
     
     var currency1 = "..."
     var currency2 = "..."
-    
-    var delegate: NewCurrencyDelegation?
-    
-    //MRK: - Actions
-    @IBAction func doneButtonPressed(_ sender: Any) {
-        currencies!.append(Currency(name: currency1, value: 1.0))
-        delegate?.newCurrencyAdded(currencies: currencies!)
-        
-        self.navigationController?.popViewController(animated: true)
-        self.dismiss(animated: true, completion: nil)
-    }
     
 
     override func viewDidLoad() {
@@ -38,6 +30,7 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
         currencyPicker.delegate = self
         currencyPicker.dataSource = self
     }
+
 }
 
 //MARK: - Picker settings
