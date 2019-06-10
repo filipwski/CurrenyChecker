@@ -11,6 +11,7 @@
 		B70057E422AC564C00692225 /* CurrencyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70057E322AC564C00692225 /* CurrencyTableViewController.swift */; };
 		B70057EB22AC698D00692225 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70057EA22AC698D00692225 /* Currency.swift */; };
 		B70057EF22ADADCA00692225 /* UISettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70057EE22ADADCA00692225 /* UISettings.swift */; };
+		B70057F122ADC50200692225 /* NewCurrencyDelegation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70057F022ADC50200692225 /* NewCurrencyDelegation.swift */; };
 		B7B770FA22ABE7E800166478 /* CurrencyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B770F922ABE7E800166478 /* CurrencyTableViewCell.swift */; };
 		B7F1913C22A46C1C002F8022 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F1913B22A46C1C002F8022 /* AppDelegate.swift */; };
 		B7F1914022A46C1C002F8022 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F1913F22A46C1C002F8022 /* SettingsViewController.swift */; };
@@ -26,6 +27,7 @@
 		B70057E322AC564C00692225 /* CurrencyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTableViewController.swift; sourceTree = "<group>"; };
 		B70057EA22AC698D00692225 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		B70057EE22ADADCA00692225 /* UISettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISettings.swift; sourceTree = "<group>"; };
+		B70057F022ADC50200692225 /* NewCurrencyDelegation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCurrencyDelegation.swift; sourceTree = "<group>"; };
 		B7B770F922ABE7E800166478 /* CurrencyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTableViewCell.swift; sourceTree = "<group>"; };
 		B7F1913822A46C1C002F8022 /* CurrenyChecker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrenyChecker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7F1913B22A46C1C002F8022 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				B7F1914922A46C1D002F8022 /* Info.plist */,
 				B70057EA22AC698D00692225 /* Currency.swift */,
 				B70057EE22ADADCA00692225 /* UISettings.swift */,
+				B70057F022ADC50200692225 /* NewCurrencyDelegation.swift */,
 			);
 			path = CurrenyChecker;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7B770FA22ABE7E800166478 /* CurrencyTableViewCell.swift in Sources */,
+				B70057F122ADC50200692225 /* NewCurrencyDelegation.swift in Sources */,
 				B70057EB22AC698D00692225 /* Currency.swift in Sources */,
 				B70057EF22ADADCA00692225 /* UISettings.swift in Sources */,
 				B7F1914022A46C1C002F8022 /* SettingsViewController.swift in Sources */,

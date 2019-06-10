@@ -89,7 +89,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Ov4-EV-gVC">
                             <connections>
-                                <segue destination="8rJ-Kc-sve" kind="show" id="4J5-VJ-EQd"/>
+                                <segue destination="8rJ-Kc-sve" kind="show" identifier="addCurrency" id="4J5-VJ-EQd"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -114,7 +114,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="oGs-vU-JhJ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -139,7 +139,11 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Add currency" id="hRV-P1-5uL">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Jfy-oO-MWs"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Jfy-oO-MWs">
+                            <connections>
+                                <action selector="doneButtonPressed:" destination="8rJ-Kc-sve" id="LDT-l6-H0e"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="currencyPicker" destination="ppO-sg-les" id="Dxy-1H-QoA"/>
