@@ -13,6 +13,8 @@
 		B70057EF22ADADCA00692225 /* UISettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70057EE22ADADCA00692225 /* UISettings.swift */; };
 		B70057F122ADC50200692225 /* NewCurrencyDelegation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70057F022ADC50200692225 /* NewCurrencyDelegation.swift */; };
 		B7B770FA22ABE7E800166478 /* CurrencyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B770F922ABE7E800166478 /* CurrencyTableViewCell.swift */; };
+		B7D6F63122AF0AB1001CD36A /* PickerViewSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D6F63022AF0AB1001CD36A /* PickerViewSettings.swift */; };
+		B7D6F63522AF0BA5001CD36A /* TableViewSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D6F63422AF0BA5001CD36A /* TableViewSettings.swift */; };
 		B7F1913C22A46C1C002F8022 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F1913B22A46C1C002F8022 /* AppDelegate.swift */; };
 		B7F1914022A46C1C002F8022 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F1913F22A46C1C002F8022 /* SettingsViewController.swift */; };
 		B7F1914322A46C1C002F8022 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7F1914122A46C1C002F8022 /* Main.storyboard */; };
@@ -29,6 +31,8 @@
 		B70057EE22ADADCA00692225 /* UISettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISettings.swift; sourceTree = "<group>"; };
 		B70057F022ADC50200692225 /* NewCurrencyDelegation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCurrencyDelegation.swift; sourceTree = "<group>"; };
 		B7B770F922ABE7E800166478 /* CurrencyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTableViewCell.swift; sourceTree = "<group>"; };
+		B7D6F63022AF0AB1001CD36A /* PickerViewSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewSettings.swift; sourceTree = "<group>"; };
+		B7D6F63422AF0BA5001CD36A /* TableViewSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewSettings.swift; sourceTree = "<group>"; };
 		B7F1913822A46C1C002F8022 /* CurrenyChecker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrenyChecker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7F1913B22A46C1C002F8022 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7F1913F22A46C1C002F8022 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +63,25 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		B7D6F63222AF0B1A001CD36A /* SettingsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B7F1913F22A46C1C002F8022 /* SettingsViewController.swift */,
+				B7D6F63022AF0AB1001CD36A /* PickerViewSettings.swift */,
+			);
+			path = SettingsViewController;
+			sourceTree = "<group>";
+		};
+		B7D6F63322AF0B5B001CD36A /* CurrencyTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B70057E322AC564C00692225 /* CurrencyTableViewController.swift */,
+				B7D6F63422AF0BA5001CD36A /* TableViewSettings.swift */,
+				B7B770F922ABE7E800166478 /* CurrencyTableViewCell.swift */,
+			);
+			path = CurrencyTableViewController;
+			sourceTree = "<group>";
+		};
 		B7F1912F22A46C1C002F8022 = {
 			isa = PBXGroup;
 			children = (
@@ -81,16 +104,15 @@
 			isa = PBXGroup;
 			children = (
 				B7F1913B22A46C1C002F8022 /* AppDelegate.swift */,
-				B70057E322AC564C00692225 /* CurrencyTableViewController.swift */,
-				B7B770F922ABE7E800166478 /* CurrencyTableViewCell.swift */,
-				B7F1913F22A46C1C002F8022 /* SettingsViewController.swift */,
-				B7F1914122A46C1C002F8022 /* Main.storyboard */,
-				B7F1914422A46C1D002F8022 /* Assets.xcassets */,
-				B7F1914622A46C1D002F8022 /* LaunchScreen.storyboard */,
-				B7F1914922A46C1D002F8022 /* Info.plist */,
-				B70057EA22AC698D00692225 /* Currency.swift */,
 				B70057EE22ADADCA00692225 /* UISettings.swift */,
+				B7D6F63322AF0B5B001CD36A /* CurrencyTableViewController */,
+				B7D6F63222AF0B1A001CD36A /* SettingsViewController */,
 				B70057F022ADC50200692225 /* NewCurrencyDelegation.swift */,
+				B70057EA22AC698D00692225 /* Currency.swift */,
+				B7F1914122A46C1C002F8022 /* Main.storyboard */,
+				B7F1914622A46C1D002F8022 /* LaunchScreen.storyboard */,
+				B7F1914422A46C1D002F8022 /* Assets.xcassets */,
+				B7F1914922A46C1D002F8022 /* Info.plist */,
 			);
 			path = CurrenyChecker;
 			sourceTree = "<group>";
@@ -223,6 +245,8 @@
 				B70057EB22AC698D00692225 /* Currency.swift in Sources */,
 				B70057EF22ADADCA00692225 /* UISettings.swift in Sources */,
 				B7F1914022A46C1C002F8022 /* SettingsViewController.swift in Sources */,
+				B7D6F63122AF0AB1001CD36A /* PickerViewSettings.swift in Sources */,
+				B7D6F63522AF0BA5001CD36A /* TableViewSettings.swift in Sources */,
 				B7F1913C22A46C1C002F8022 /* AppDelegate.swift in Sources */,
 				B70057E422AC564C00692225 /* CurrencyTableViewController.swift in Sources */,
 			);

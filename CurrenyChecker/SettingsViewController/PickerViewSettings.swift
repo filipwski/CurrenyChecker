@@ -1,46 +1,13 @@
 //
-//  SecondViewController.swift
+//  PickerViewSettings.swift
 //  CurrenyChecker
 //
-//  Created by Filip Skibiński on 02/06/2019.
+//  Created by Filip Skibiński on 11/06/2019.
 //  Copyright © 2019 Filip Skibiński. All rights reserved.
 //
 
 import UIKit
 
-class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
-    
-    //MARK: - Properties
-    @IBOutlet weak var currencyPicker: UIPickerView!
-    @IBOutlet weak var topLabel: UILabel!
-    
-    var currencies: [Currency]?
-    
-    let currencyArray = ["AUD", "BRL","CAD","CNY","EUR","GBP","HKD","IDR","ILS","INR","JPY","MXN","NOK","NZD","PLN","RON","RUB","SEK","SGD","USD","ZAR"]
-    
-    var currency1 = "..."
-    var currency2 = "..."
-    
-    var delegate: NewCurrencyDelegation?
-    
-    //MRK: - Actions
-    @IBAction func doneButtonPressed(_ sender: Any) {
-        currencies!.append(Currency(name: currency1, value: 1.0))
-        delegate?.newCurrencyAdded(currencies: currencies!)
-        
-        self.navigationController?.popViewController(animated: true)
-        self.dismiss(animated: true, completion: nil)
-    }
-    
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        currencyPicker.delegate = self
-        currencyPicker.dataSource = self
-    }
-}
-
-//MARK: - Picker settings
 extension SettingsViewController {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 4
@@ -85,4 +52,3 @@ extension SettingsViewController {
         }
     }
 }
-
