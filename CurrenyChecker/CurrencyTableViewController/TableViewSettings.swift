@@ -34,9 +34,13 @@ extension CurrencyTableViewController {
         let parameters = ["base" : currency.baseCurrencyName, "symbols" : currency.targetCurrencyName]
         
         cell.currencyName.text = currency.baseCurrencyName
-        currency.getCurrencyValue(url: baseUrl, parameters: parameters, completion: {
-            cell.currencyValue.text = currency.completeTargetCurrencyData
-        })
+        if monitor.currentPath.status == .unsatisfied {
+            cell.currencyValue.text = "Loading..."
+        } else {
+            currency.getCurrencyValue(url: baseUrl, parameters: parameters, completion: {
+                cell.currencyValue.text = currency.completeTargetCurrencyData
+            })
+        }
         return cell
     }
     

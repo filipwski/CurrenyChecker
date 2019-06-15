@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-class Currency {
+class Currency: NSObject, NSCoding {
     private(set) var baseCurrencyName = ""
     private(set) var targetCurrencyName = ""
     private var value = 0.0
@@ -35,6 +35,18 @@ class Currency {
             }
             completion()
         }
+    }
+    
+    // Data archiving methods
+    
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(self.baseCurrencyName, forKey: "baseCurrencyName")
+        aCoder.encode(self.targetCurrencyName, forKey: "targetCurrencyName")
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        baseCurrencyName = aDecoder.decodeObject(forKey: "baseCurrencyName") as! String
+        targetCurrencyName = aDecoder.decodeObject(forKey: "targetCurrencyName") as! String
     }
     
 }

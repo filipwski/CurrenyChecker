@@ -103,18 +103,42 @@
 		B7F1913A22A46C1C002F8022 /* CurrenyChecker */ = {
 			isa = PBXGroup;
 			children = (
-				B7F1913B22A46C1C002F8022 /* AppDelegate.swift */,
-				B70057EE22ADADCA00692225 /* UISettings.swift */,
+				B7F26E3422B460A40079487D /* App Delegate */,
+				B7F26E2D22B4024E0079487D /* General */,
 				B7D6F63322AF0B5B001CD36A /* CurrencyTableViewController */,
 				B7D6F63222AF0B1A001CD36A /* SettingsViewController */,
+				B7F26E2922B3FB1C0079487D /* Model */,
 				B70057F022ADC50200692225 /* NewCurrencyDelegation.swift */,
-				B70057EA22AC698D00692225 /* Currency.swift */,
 				B7F1914122A46C1C002F8022 /* Main.storyboard */,
 				B7F1914622A46C1D002F8022 /* LaunchScreen.storyboard */,
 				B7F1914422A46C1D002F8022 /* Assets.xcassets */,
 				B7F1914922A46C1D002F8022 /* Info.plist */,
 			);
 			path = CurrenyChecker;
+			sourceTree = "<group>";
+		};
+		B7F26E2922B3FB1C0079487D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B70057EA22AC698D00692225 /* Currency.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B7F26E2D22B4024E0079487D /* General */ = {
+			isa = PBXGroup;
+			children = (
+				B70057EE22ADADCA00692225 /* UISettings.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		B7F26E3422B460A40079487D /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				B7F1913B22A46C1C002F8022 /* AppDelegate.swift */,
+			);
+			path = "App Delegate";
 			sourceTree = "<group>";
 		};
 		DF800A18BD08EEDE90CCE3B9 /* Frameworks */ = {

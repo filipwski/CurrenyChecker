@@ -46,7 +46,7 @@ extension SettingsViewController {
         }
         
         if currency1 == currency2 {
-            topLabel.text = "Same currency chosen"
+            topLabel.text = "Same currency selected"
         } else {
             topLabel.text = "\(currency1) in \(currency2)"
         }
