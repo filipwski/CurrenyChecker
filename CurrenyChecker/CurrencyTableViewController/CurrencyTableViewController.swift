@@ -44,7 +44,7 @@ class CurrencyTableViewController: UITableViewController, NewCurrencyDelegation 
             }
         }
         
-        refreshData()
+        refreshDataWhenConnected()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -79,14 +79,13 @@ class CurrencyTableViewController: UITableViewController, NewCurrencyDelegation 
     
     // Refresh data when connected
     
-    private func refreshData() {
-        let queue = DispatchQueue.global(qos: .background)
+    private func refreshDataWhenConnected() {
         monitor.pathUpdateHandler = {
             path in
             if path.status == .satisfied {
                 self.tableView.reloadData()
             }
         }
-        monitor.start(queue: queue)
+        monitor.start(queue: DispatchQueue.main)
     }
 }

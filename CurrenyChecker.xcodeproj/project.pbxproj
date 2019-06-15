@@ -15,12 +15,23 @@
 		B7B770FA22ABE7E800166478 /* CurrencyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B770F922ABE7E800166478 /* CurrencyTableViewCell.swift */; };
 		B7D6F63122AF0AB1001CD36A /* PickerViewSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D6F63022AF0AB1001CD36A /* PickerViewSettings.swift */; };
 		B7D6F63522AF0BA5001CD36A /* TableViewSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D6F63422AF0BA5001CD36A /* TableViewSettings.swift */; };
+		B7F18E6922B59F71009F0DF0 /* CurrenyCheckerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F18E6822B59F71009F0DF0 /* CurrenyCheckerTests.swift */; };
 		B7F1913C22A46C1C002F8022 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F1913B22A46C1C002F8022 /* AppDelegate.swift */; };
 		B7F1914022A46C1C002F8022 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F1913F22A46C1C002F8022 /* SettingsViewController.swift */; };
 		B7F1914322A46C1C002F8022 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7F1914122A46C1C002F8022 /* Main.storyboard */; };
 		B7F1914522A46C1D002F8022 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7F1914422A46C1D002F8022 /* Assets.xcassets */; };
 		B7F1914822A46C1D002F8022 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7F1914622A46C1D002F8022 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B7F18E6B22B59F71009F0DF0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7F1913022A46C1C002F8022 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B7F1913722A46C1C002F8022;
+			remoteInfo = CurrenyChecker;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2243A9023536E8DC8D43EF4F /* Pods-CurrenyChecker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrenyChecker.debug.xcconfig"; path = "Target Support Files/Pods-CurrenyChecker/Pods-CurrenyChecker.debug.xcconfig"; sourceTree = "<group>"; };
@@ -33,6 +44,9 @@
 		B7B770F922ABE7E800166478 /* CurrencyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTableViewCell.swift; sourceTree = "<group>"; };
 		B7D6F63022AF0AB1001CD36A /* PickerViewSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewSettings.swift; sourceTree = "<group>"; };
 		B7D6F63422AF0BA5001CD36A /* TableViewSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewSettings.swift; sourceTree = "<group>"; };
+		B7F18E6622B59F71009F0DF0 /* CurrenyCheckerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CurrenyCheckerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7F18E6822B59F71009F0DF0 /* CurrenyCheckerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenyCheckerTests.swift; sourceTree = "<group>"; };
+		B7F18E6A22B59F71009F0DF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7F1913822A46C1C002F8022 /* CurrenyChecker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrenyChecker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7F1913B22A46C1C002F8022 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7F1913F22A46C1C002F8022 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +57,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B7F18E6322B59F71009F0DF0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B7F1913522A46C1C002F8022 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -82,10 +103,20 @@
 			path = CurrencyTableViewController;
 			sourceTree = "<group>";
 		};
+		B7F18E6722B59F71009F0DF0 /* CurrenyCheckerTests */ = {
+			isa = PBXGroup;
+			children = (
+				B7F18E6822B59F71009F0DF0 /* CurrenyCheckerTests.swift */,
+				B7F18E6A22B59F71009F0DF0 /* Info.plist */,
+			);
+			path = CurrenyCheckerTests;
+			sourceTree = "<group>";
+		};
 		B7F1912F22A46C1C002F8022 = {
 			isa = PBXGroup;
 			children = (
 				B7F1913A22A46C1C002F8022 /* CurrenyChecker */,
+				B7F18E6722B59F71009F0DF0 /* CurrenyCheckerTests */,
 				B7F1913922A46C1C002F8022 /* Products */,
 				086161E6F34985C8DDB23120 /* Pods */,
 				DF800A18BD08EEDE90CCE3B9 /* Frameworks */,
@@ -96,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				B7F1913822A46C1C002F8022 /* CurrenyChecker.app */,
+				B7F18E6622B59F71009F0DF0 /* CurrenyCheckerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -152,6 +184,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B7F18E6522B59F71009F0DF0 /* CurrenyCheckerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7F18E6F22B59F71009F0DF0 /* Build configuration list for PBXNativeTarget "CurrenyCheckerTests" */;
+			buildPhases = (
+				B7F18E6222B59F71009F0DF0 /* Sources */,
+				B7F18E6322B59F71009F0DF0 /* Frameworks */,
+				B7F18E6422B59F71009F0DF0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B7F18E6C22B59F71009F0DF0 /* PBXTargetDependency */,
+			);
+			name = CurrenyCheckerTests;
+			productName = CurrenyCheckerTests;
+			productReference = B7F18E6622B59F71009F0DF0 /* CurrenyCheckerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		B7F1913722A46C1C002F8022 /* CurrenyChecker */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B7F1914C22A46C1D002F8022 /* Build configuration list for PBXNativeTarget "CurrenyChecker" */;
@@ -181,6 +231,10 @@
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Filip Skibiński";
 				TargetAttributes = {
+					B7F18E6522B59F71009F0DF0 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = B7F1913722A46C1C002F8022;
+					};
 					B7F1913722A46C1C002F8022 = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
@@ -200,11 +254,19 @@
 			projectRoot = "";
 			targets = (
 				B7F1913722A46C1C002F8022 /* CurrenyChecker */,
+				B7F18E6522B59F71009F0DF0 /* CurrenyCheckerTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B7F18E6422B59F71009F0DF0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B7F1913622A46C1C002F8022 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -260,6 +322,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B7F18E6222B59F71009F0DF0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7F18E6922B59F71009F0DF0 /* CurrenyCheckerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B7F1913422A46C1C002F8022 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -277,6 +347,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B7F18E6C22B59F71009F0DF0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B7F1913722A46C1C002F8022 /* CurrenyChecker */;
+			targetProxy = B7F18E6B22B59F71009F0DF0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B7F1914122A46C1C002F8022 /* Main.storyboard */ = {
@@ -298,6 +376,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		B7F18E6D22B59F71009F0DF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6JFWPWP732;
+				INFOPLIST_FILE = CurrenyCheckerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.FilipWSki.CurrenyCheckerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CurrenyChecker.app/CurrenyChecker";
+			};
+			name = Debug;
+		};
+		B7F18E6E22B59F71009F0DF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6JFWPWP732;
+				INFOPLIST_FILE = CurrenyCheckerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.FilipWSki.CurrenyCheckerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CurrenyChecker.app/CurrenyChecker";
+			};
+			name = Release;
+		};
 		B7F1914A22A46C1D002F8022 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -455,6 +573,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B7F18E6F22B59F71009F0DF0 /* Build configuration list for PBXNativeTarget "CurrenyCheckerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7F18E6D22B59F71009F0DF0 /* Debug */,
+				B7F18E6E22B59F71009F0DF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B7F1913322A46C1C002F8022 /* Build configuration list for PBXProject "CurrenyChecker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

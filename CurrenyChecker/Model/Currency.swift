@@ -28,7 +28,11 @@ class Currency: NSObject, NSCoding {
             case .success(let data):
                 let currencyData: JSON = JSON(data)
                 self.value = currencyData["rates"]["\(self.targetCurrencyName)"].doubleValue
-                self.completeTargetCurrencyData = "\(String(format: "%.2f", self.value)) \(self.targetCurrencyName)"
+                let dataFormat: () -> String = {
+                    if self.value < 0.01 { return "%.4f" }
+                    else { return "%.2f" }
+                }
+                self.completeTargetCurrencyData = "\(String(format: dataFormat(), self.value)) \(self.targetCurrencyName)"
             case .failure(let error):
                 self.completeTargetCurrencyData = "Unable to get data"
                 print(error)
